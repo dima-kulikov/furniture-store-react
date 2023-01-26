@@ -6,7 +6,7 @@
 }
 
 body{
-    background: #fff;
+    background: #e9e9e9;
     color: #222;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -66,6 +66,60 @@ header .presentation::before {
     color: #fff;
     font-weight: 300;
     font-size: 16px;
+}
+main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main .item {
+    position: relative;
+    padding-bottom: 20px;
+    max-width: 30%;
+    margin-bottom: 50px;
+    background: #f5f5f5;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+main .item img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 400px;
+    transition: transform 0.3s ease-in;
+}
+
+main .item img:hover {
+    transform: scale(1.05);
+}
+
+main h2, main p, main b {
+    margin: 10px 20px;
+    color: #333;
+}
+main b {
+    color: #32afa7;
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+main .add-to-cart:hover {
+    transform: scale(1.2) translateY(-5px);
 }
 
 footer {

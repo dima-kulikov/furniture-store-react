@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Items from "./components/Items";
 
 class App extends React.Component{
 constructor(props) {
@@ -10,7 +11,7 @@ constructor(props) {
       {
         id:1,
         title: 'Стул серый',
-        img: './img/chairs-1.jpg',
+        img: 'chairs-1.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'chairs',
         price: '34.99'
@@ -18,7 +19,7 @@ constructor(props) {
       {
         id:2,
         title: 'Стол',
-        img: './img/tables-1.jpg',
+        img: 'tables-1.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'tables',
         price: '134.99'
@@ -26,7 +27,7 @@ constructor(props) {
       {
         id:3,
         title: 'Диван',
-        img: '',
+        img: 'sofa-1.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'sofa',
         price: '234.99'
@@ -34,7 +35,7 @@ constructor(props) {
       {
         id:4,
         title: 'Лампа',
-        img: '',
+        img: 'light-1.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'light',
         price: '44.20'
@@ -42,7 +43,7 @@ constructor(props) {
       {
         id:5,
         title: 'Стул черный',
-        img: './img/chairs-1.jpg',
+        img: 'chairs-2.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'chairs',
         price: '56.49'
@@ -50,7 +51,7 @@ constructor(props) {
       {
         id:6,
         title: 'Стол',
-        img: './img/tables-2.jpg',
+        img: 'tables-2.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'tables',
         price: '199.99'
@@ -58,7 +59,7 @@ constructor(props) {
       {
         id:7,
         title: 'Диван',
-        img: '',
+        img: 'sofa-2.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'sofa',
         price: '456.25'
@@ -66,7 +67,7 @@ constructor(props) {
       {
         id:8,
         title: 'Лампа',
-        img: '',
+        img: 'light-2.jpg',
         desc:"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, illum at?",
         category: 'light',
         price: '72.15'
@@ -80,6 +81,7 @@ constructor(props) {
   return (
     <div className="wrapper">
      <Header/>
+     <Items items={this.state.items}/>
      <Footer/>
     </div>
   );
@@ -89,5 +91,5 @@ constructor(props) {
 export default App;
 
 
-// https://www.youtube.com/watch?v=5XAz9-diwuA&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=3
-// 3-35
+// https://www.youtube.com/watch?v=JyU2RbwYxJA&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=4
+// 00
