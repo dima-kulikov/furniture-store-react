@@ -75,11 +75,24 @@ constructor(props) {
       },
     ]
   }
+
   this.addToOrder = this.addToOrder.bind(this)
 }
 
 addToOrder(item) {
-  this.setState({orders:[...this.state.orders, item]})
+
+  let isInArray = false;
+
+  this.state.orders.forEach(el => {
+    if(el.id === item.id){
+      isInArray = true;
+    }
+  })
+
+  if(!isInArray){
+  this.setState({orders:[...this.state.orders, item]});
+  }
+
 }
 
 
@@ -98,5 +111,5 @@ addToOrder(item) {
 export default App;
 
 
-// https://www.youtube.com/watch?v=h7zwMowOytw&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=5
-// 17-12
+// https://www.youtube.com/watch?v=HjKIy8N-GNI&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=6
+// 00
