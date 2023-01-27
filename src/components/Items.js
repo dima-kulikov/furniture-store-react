@@ -5,7 +5,10 @@ export class items extends Component {
   render() {
     return (
      <main>
-        {this.props.items.map(el => <Item key={el.id} item ={el}/>)}
+        {this.props.items.map(el => (
+        
+          <Item key={el.id} item ={el} onAdd={this.props.onAdd} />
+          ))}
      </main>
     )
   }

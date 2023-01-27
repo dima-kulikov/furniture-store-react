@@ -79,7 +79,7 @@ constructor(props) {
 }
 
 addToOrder(item) {
-
+  this.setState({orders:[...this.state.orders, item]})
 }
 
 
@@ -87,8 +87,8 @@ addToOrder(item) {
   render() {
   return (
     <div className="wrapper">
-     <Header/>
-     <Items items={this.state.items}/>
+     <Header orders={this.state.orders}/>
+     <Items items={this.state.items} onAdd={this.addToOrder}/>
      <Footer/>
     </div>
   );
@@ -98,5 +98,5 @@ addToOrder(item) {
 export default App;
 
 
-// https://www.youtube.com/watch?v=JyU2RbwYxJA&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=4
-// 00
+// https://www.youtube.com/watch?v=h7zwMowOytw&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=5
+// 17-12
