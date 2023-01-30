@@ -75,20 +75,21 @@ constructor(props) {
       },
     ]
   }
-
   this.addToOrder = this.addToOrder.bind(this)
+  this.deleteOrder = this.deleteOrder.bind(this)
+}
+
+deleteOrder(id) {
+  this.setState({orders: this.state.orders.filter( el => el.id !== id)})
 }
 
 addToOrder(item) {
-
   let isInArray = false;
-
   this.state.orders.forEach(el => {
     if(el.id === item.id){
       isInArray = true;
     }
   })
-
   if(!isInArray){
   this.setState({orders:[...this.state.orders, item]});
   }
@@ -100,7 +101,7 @@ addToOrder(item) {
   render() {
   return (
     <div className="wrapper">
-     <Header orders={this.state.orders}/>
+     <Header orders={this.state.orders} onDelete={this.deleteOrder}/>
      <Items items={this.state.items} onAdd={this.addToOrder}/>
      <Footer/>
     </div>
@@ -111,5 +112,5 @@ addToOrder(item) {
 export default App;
 
 
-// https://www.youtube.com/watch?v=HjKIy8N-GNI&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=6
+// https://www.youtube.com/watch?v=uBC7NiKBAEA&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=7
 // 00
