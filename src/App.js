@@ -138,8 +138,3 @@ onShowItem(item) {
 }
 
 export default App;
-
-
-// https://www.youtube.com/watch?v=1njlwbOw6B0&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=8
-// https://www.youtube.com/watch?v=e04Cc3n0BkU&list=PL0lO_mIqDDFVfIjOW2NsBaDYXB_ZwDB0p&index=9
-// 00

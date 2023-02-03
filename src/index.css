@@ -10,6 +10,7 @@ body{
     color: #222;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    padding: 0 15px;
 }
 
 .wrapper {
@@ -175,6 +176,23 @@ main {
     z-index: 99;
     overflow: auto;
 }
+.full-item__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 200;
+    border: 1px solid #ca5252;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px 8px;
+    color: #222;
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+.full-item__close:hover {
+    background-color: #ca5252;
+    color: #fff;
+}
 
 .full-item > div {
     max-width: 500px;
@@ -243,4 +261,40 @@ main .add-to-cart:hover,
 footer {
     text-align: center;
     margin-top: 100px;
+}
+
+@media (max-width: 599px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    main .item {
+        max-width: 90%;
+    }
+    header .presentation::after {
+        left: 15px;
+        top: 20px;
+    }
+    header .presentation::before{
+        left: 15px;
+        top: 90px;
+    }
+    header .shop-cart {
+        width: auto;
+        top: 73px;
+    }
+    .full-item > div {
+        margin: 5% 15px;
+    }
+    
+}
+@media (max-width: 499px) {
+    header .logo {
+        margin-right: 50%;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .wrapper {
+        margin-top: 25px;
+    }
 }
