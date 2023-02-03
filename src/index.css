@@ -117,26 +117,27 @@ header .presentation {
     margin: 50px 0;
     background: url('./img/bg.jpg') no-repeat ;
     width: 100%;
-    height: 500px;
+    /* height: 500px; */
     background-size: cover;
     background-position: center center;
     background-blend-mode: multiply;
     background-color: #bcbcbc;
+    padding-bottom: 43%;
 }
 header .presentation::after {
     content: "Товари для тепла и уюта";
     position: absolute;
-    top: 180px;
-    left: 110px;
+    top: 35%;
+    left: 8%;
     color: #fff;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 28px;
 }
 header .presentation::before {
     content: "Качество и гарантия";
     position: absolute;
-    top: 220px;
-    left: 110px;
+    top: 46%;
+    left: 8%;
     color: #fff;
     font-weight: 300;
     font-size: 16px;
@@ -272,12 +273,13 @@ footer {
         max-width: 90%;
     }
     header .presentation::after {
-        left: 15px;
-        top: 20px;
+        left: 8%;
+        top: 5%;
+        font-size: 22px;
     }
     header .presentation::before{
-        left: 15px;
-        top: 90px;
+        left: 8%;
+        top: 18%;
     }
     header .shop-cart {
         width: auto;
